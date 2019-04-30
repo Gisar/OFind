@@ -8,3 +8,4 @@ G:\GitHub\OFind\OFind\obj\Debug\OFind.csproj.GenerateResource.cache
 G:\GitHub\OFind\OFind\obj\Debug\OFind.csproj.CoreCompileInputs.cache
 G:\GitHub\OFind\OFind\obj\Debug\OFind.exe
 G:\GitHub\OFind\OFind\obj\Debug\OFind.pdb
+G:\GitHub\OFind\OFind\obj\Debug\OFind.ViewWindow.resources
