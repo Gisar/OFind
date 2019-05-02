@@ -16,7 +16,7 @@ namespace OFind
         public MainForm()
         {
             InitializeComponent();
-            string version = "v2.0";
+            string version = "v2.1";
             verstionLabel.Text = version;
             this.Text = this.Text + " - " + version;
         }
@@ -190,15 +190,26 @@ namespace OFind
             }
             return input;
         }
-
+        public static List<string> RidOfDuplicate (List<string> input)
+        {
+            for (int i = 0; i < input.Count(); i++)
+            {
+                List<string> currDock = input[i].Split('\t').ToList();
+                currDock = currDock.Distinct().ToList();
+                input[i] = string.Join("", currDock);
+            }
+            return input;
+        }
         public static List<string> CompleteParce(string path, bool[] boxes)
         {
             //Ищем процедуры
             List<string> names = SearchSql(path, boxes);
+            //Убираем дубли внутри одного документа
+            names = RidOfDuplicate(names);
             //Убираем пустые строки
             names = names.Where(s => !string.IsNullOrWhiteSpace(s)).ToList();
             //Склеиваем все в одну строку и разделяем заново
-            names = string.Join(Environment.NewLine, names).Split('\t').ToList();
+            names = string.Join(Environment.NewLine, names).Split('\n').ToList();
             //Приводим начало строки в порядок и первое слово пишем капсом
             names = UpperFirstWord(names);
             //Заменяем сокращения на полные имена
