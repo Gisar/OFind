@@ -204,10 +204,10 @@ namespace OFind
         {
             //Ищем процедуры
             List<string> names = SearchSql(path, boxes);
-            //Убираем дубли внутри одного документа
-            names = RidOfDuplicate(names);
             //Убираем пустые строки
             names = names.Where(s => !string.IsNullOrWhiteSpace(s)).ToList();
+            //Убираем дубли внутри одного документа
+            names = RidOfDuplicate(names);            
             //Склеиваем все в одну строку и разделяем заново
             names = string.Join(Environment.NewLine, names).Split('\n').ToList();
             //Приводим начало строки в порядок и первое слово пишем капсом
@@ -292,6 +292,11 @@ namespace OFind
             triggerCheck.Checked = true;
             tableCheck.Checked = true;
             indexCheck.Checked = true;
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
