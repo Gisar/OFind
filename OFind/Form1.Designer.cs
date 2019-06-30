@@ -1,4 +1,7 @@
-﻿namespace OFind
+﻿using System;
+using System.Windows.Forms;
+
+namespace OFind
 {
     partial class MainForm
     {
@@ -28,6 +31,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.FolderLabel = new System.Windows.Forms.Label();
             this.fromFolderTextBox = new System.Windows.Forms.TextBox();
@@ -50,6 +54,7 @@
             this.clearFolder = new System.Windows.Forms.Button();
             this.fileButton = new System.Windows.Forms.Button();
             this.folderButton = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // FolderLabel
@@ -272,6 +277,10 @@
             this.folderButton.UseVisualStyleBackColor = true;
             this.folderButton.Click += new System.EventHandler(this.FolderButton_Click);
             // 
+            // toolTip1
+            // 
+            this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.ToolTip1_Popup);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -297,9 +306,11 @@
             this.Controls.Add(this.fromFolderTextBox);
             this.Controls.Add(this.FolderLabel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainForm";
             this.Text = "OFind";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -327,6 +338,7 @@
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label verstionLabel;
+        private ToolTip toolTip1;
     }
 }
 

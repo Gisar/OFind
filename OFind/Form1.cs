@@ -16,7 +16,7 @@ namespace OFind
         public MainForm()
         {
             InitializeComponent();
-            string version = "v2.1";
+            string version = "v2.2";
             verstionLabel.Text = version;
             this.Text = this.Text + " - " + version;
         }
@@ -71,8 +71,14 @@ namespace OFind
                         )
                         &&
                         (
-                            (line.ToUpper().Contains(" PROC ".ToUpper()) && boxes[0])
-                            || (line.ToUpper().Contains(" FUNC ".ToUpper()) && boxes[1])
+                            (
+                                (line.ToUpper().Contains(" PROC ".ToUpper()) && boxes[0])
+                                || (line.ToUpper().Contains(" PROCEDURE ".ToUpper()) && boxes[0])
+                            )
+                            || (
+                                (line.ToUpper().Contains(" FUNC ".ToUpper()) && boxes[1])
+                                || (line.ToUpper().Contains(" FUNCTION ".ToUpper()) && boxes[1])
+                               )
                             || (line.ToUpper().Contains(" VIEW ".ToUpper()) && boxes[2])
                             || (line.ToUpper().Contains(" TRIGGER ".ToUpper()) && boxes[3])
                             || (
@@ -204,10 +210,10 @@ namespace OFind
         {
             //Ищем процедуры
             List<string> names = SearchSql(path, boxes);
-            //Убираем дубли внутри одного документа
-            names = RidOfDuplicate(names);
             //Убираем пустые строки
             names = names.Where(s => !string.IsNullOrWhiteSpace(s)).ToList();
+            //Убираем дубли внутри одного документа
+            names = RidOfDuplicate(names);
             //Склеиваем все в одну строку и разделяем заново
             names = string.Join(Environment.NewLine, names).Split('\n').ToList();
             //Приводим начало строки в порядок и первое слово пишем капсом
@@ -292,6 +298,29 @@ namespace OFind
             triggerCheck.Checked = true;
             tableCheck.Checked = true;
             indexCheck.Checked = true;
+        }
+
+        private void Form_KeyDown(object sender, KeyEventArgs e)
+        {
+            //throw new NotImplementedException();
+            if (e.Control && e.KeyCode == Keys.O) //Ctrl+S
+            {
+                FolderBrowserDialog folderDlg = new FolderBrowserDialog();
+                DialogResult result = folderDlg.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    fromFolderTextBox.Text = folderDlg.SelectedPath;
+                }
+            }
+            else if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
+        }
+
+        private void ToolTip1_Popup(object sender, PopupEventArgs e)
+        {
+
         }
     }
 }
