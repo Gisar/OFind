@@ -61,37 +61,35 @@ namespace OFind
             // FolderLabel
             // 
             this.FolderLabel.AutoSize = true;
-            this.FolderLabel.Location = new System.Drawing.Point(7, 11);
-            this.FolderLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.FolderLabel.Location = new System.Drawing.Point(9, 14);
             this.FolderLabel.Name = "FolderLabel";
-            this.FolderLabel.Size = new System.Drawing.Size(42, 13);
+            this.FolderLabel.Size = new System.Drawing.Size(53, 17);
             this.FolderLabel.TabIndex = 0;
             this.FolderLabel.Text = "Папка:";
             this.FolderLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // fromFolderTextBox
             // 
-            this.fromFolderTextBox.Location = new System.Drawing.Point(48, 10);
-            this.fromFolderTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.fromFolderTextBox.Location = new System.Drawing.Point(64, 12);
+            this.fromFolderTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.fromFolderTextBox.Name = "fromFolderTextBox";
-            this.fromFolderTextBox.Size = new System.Drawing.Size(451, 20);
+            this.fromFolderTextBox.Size = new System.Drawing.Size(600, 22);
             this.fromFolderTextBox.TabIndex = 1;
             // 
             // toFileTextBox
             // 
-            this.toFileTextBox.Location = new System.Drawing.Point(48, 32);
-            this.toFileTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.toFileTextBox.Location = new System.Drawing.Point(64, 39);
+            this.toFileTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.toFileTextBox.Name = "toFileTextBox";
-            this.toFileTextBox.Size = new System.Drawing.Size(451, 20);
+            this.toFileTextBox.Size = new System.Drawing.Size(600, 22);
             this.toFileTextBox.TabIndex = 2;
             // 
             // toFileLabel
             // 
             this.toFileLabel.AutoSize = true;
-            this.toFileLabel.Location = new System.Drawing.Point(2, 35);
-            this.toFileLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.toFileLabel.Location = new System.Drawing.Point(3, 43);
             this.toFileLabel.Name = "toFileLabel";
-            this.toFileLabel.Size = new System.Drawing.Size(46, 13);
+            this.toFileLabel.Size = new System.Drawing.Size(60, 17);
             this.toFileLabel.TabIndex = 3;
             this.toFileLabel.Text = "В файл:";
             this.toFileLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -99,10 +97,9 @@ namespace OFind
             // searchLabel
             // 
             this.searchLabel.AutoSize = true;
-            this.searchLabel.Location = new System.Drawing.Point(1, 55);
-            this.searchLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.searchLabel.Location = new System.Drawing.Point(1, 68);
             this.searchLabel.Name = "searchLabel";
-            this.searchLabel.Size = new System.Drawing.Size(47, 13);
+            this.searchLabel.Size = new System.Drawing.Size(58, 17);
             this.searchLabel.TabIndex = 7;
             this.searchLabel.Text = "Искать:";
             // 
@@ -111,10 +108,10 @@ namespace OFind
             this.procCheck.AutoSize = true;
             this.procCheck.Checked = true;
             this.procCheck.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.procCheck.Location = new System.Drawing.Point(48, 55);
-            this.procCheck.Margin = new System.Windows.Forms.Padding(2);
+            this.procCheck.Location = new System.Drawing.Point(64, 68);
+            this.procCheck.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.procCheck.Name = "procCheck";
-            this.procCheck.Size = new System.Drawing.Size(83, 17);
+            this.procCheck.Size = new System.Drawing.Size(105, 21);
             this.procCheck.TabIndex = 8;
             this.procCheck.Text = "Процедуры";
             this.procCheck.UseVisualStyleBackColor = true;
@@ -124,10 +121,10 @@ namespace OFind
             this.FuncCheck.AutoSize = true;
             this.FuncCheck.Checked = true;
             this.FuncCheck.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.FuncCheck.Location = new System.Drawing.Point(48, 79);
-            this.FuncCheck.Margin = new System.Windows.Forms.Padding(2);
+            this.FuncCheck.Location = new System.Drawing.Point(64, 97);
+            this.FuncCheck.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FuncCheck.Name = "FuncCheck";
-            this.FuncCheck.Size = new System.Drawing.Size(72, 17);
+            this.FuncCheck.Size = new System.Drawing.Size(89, 21);
             this.FuncCheck.TabIndex = 9;
             this.FuncCheck.Text = "Функции";
             this.FuncCheck.UseVisualStyleBackColor = true;
@@ -137,10 +134,10 @@ namespace OFind
             this.viewCheck.AutoSize = true;
             this.viewCheck.Checked = true;
             this.viewCheck.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.viewCheck.Location = new System.Drawing.Point(48, 102);
-            this.viewCheck.Margin = new System.Windows.Forms.Padding(2);
+            this.viewCheck.Location = new System.Drawing.Point(64, 126);
+            this.viewCheck.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.viewCheck.Name = "viewCheck";
-            this.viewCheck.Size = new System.Drawing.Size(47, 17);
+            this.viewCheck.Size = new System.Drawing.Size(56, 21);
             this.viewCheck.TabIndex = 10;
             this.viewCheck.Text = "Вью";
             this.viewCheck.UseVisualStyleBackColor = true;
@@ -153,7 +150,7 @@ namespace OFind
             this.triggerCheck.Location = new System.Drawing.Point(135, 54);
             this.triggerCheck.Margin = new System.Windows.Forms.Padding(2);
             this.triggerCheck.Name = "triggerCheck";
-            this.triggerCheck.Size = new System.Drawing.Size(75, 17);
+            this.triggerCheck.Size = new System.Drawing.Size(91, 21);
             this.triggerCheck.TabIndex = 11;
             this.triggerCheck.Text = "Триггеры";
             this.triggerCheck.UseVisualStyleBackColor = true;
@@ -166,7 +163,7 @@ namespace OFind
             this.tableCheck.Location = new System.Drawing.Point(135, 77);
             this.tableCheck.Margin = new System.Windows.Forms.Padding(2);
             this.tableCheck.Name = "tableCheck";
-            this.tableCheck.Size = new System.Drawing.Size(71, 17);
+            this.tableCheck.Size = new System.Drawing.Size(89, 21);
             this.tableCheck.TabIndex = 12;
             this.tableCheck.Text = "Таблицы";
             this.tableCheck.UseVisualStyleBackColor = true;
@@ -179,7 +176,7 @@ namespace OFind
             this.indexCheck.Location = new System.Drawing.Point(135, 100);
             this.indexCheck.Margin = new System.Windows.Forms.Padding(2);
             this.indexCheck.Name = "indexCheck";
-            this.indexCheck.Size = new System.Drawing.Size(72, 17);
+            this.indexCheck.Size = new System.Drawing.Size(88, 21);
             this.indexCheck.TabIndex = 13;
             this.indexCheck.Text = "Индексы";
             this.indexCheck.UseVisualStyleBackColor = true;
@@ -189,7 +186,7 @@ namespace OFind
             this.clearCheckBtn.Location = new System.Drawing.Point(211, 53);
             this.clearCheckBtn.Margin = new System.Windows.Forms.Padding(2);
             this.clearCheckBtn.Name = "clearCheckBtn";
-            this.clearCheckBtn.Size = new System.Drawing.Size(82, 22);
+            this.clearCheckBtn.Size = new System.Drawing.Size(109, 27);
             this.clearCheckBtn.TabIndex = 14;
             this.clearCheckBtn.Text = "Снять все";
             this.clearCheckBtn.UseVisualStyleBackColor = true;
@@ -200,7 +197,7 @@ namespace OFind
             this.setCheckBtn.Location = new System.Drawing.Point(211, 79);
             this.setCheckBtn.Margin = new System.Windows.Forms.Padding(2);
             this.setCheckBtn.Name = "setCheckBtn";
-            this.setCheckBtn.Size = new System.Drawing.Size(82, 22);
+            this.setCheckBtn.Size = new System.Drawing.Size(109, 27);
             this.setCheckBtn.TabIndex = 15;
             this.setCheckBtn.Text = "Выбрать все";
             this.setCheckBtn.UseVisualStyleBackColor = true;
@@ -208,10 +205,10 @@ namespace OFind
             // 
             // SearchButton
             // 
-            this.SearchButton.Location = new System.Drawing.Point(457, 55);
-            this.SearchButton.Margin = new System.Windows.Forms.Padding(2);
+            this.SearchButton.Location = new System.Drawing.Point(609, 68);
+            this.SearchButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SearchButton.Name = "SearchButton";
-            this.SearchButton.Size = new System.Drawing.Size(82, 22);
+            this.SearchButton.Size = new System.Drawing.Size(109, 27);
             this.SearchButton.TabIndex = 18;
             this.SearchButton.Text = "Поиск";
             this.SearchButton.UseVisualStyleBackColor = true;
@@ -226,10 +223,9 @@ namespace OFind
             this.verstionLabel.AutoSize = true;
             this.verstionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.verstionLabel.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.verstionLabel.Location = new System.Drawing.Point(514, 176);
-            this.verstionLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.verstionLabel.Location = new System.Drawing.Point(685, 217);
             this.verstionLabel.Name = "verstionLabel";
-            this.verstionLabel.Size = new System.Drawing.Size(9, 9);
+            this.verstionLabel.Size = new System.Drawing.Size(13, 13);
             this.verstionLabel.TabIndex = 19;
             this.verstionLabel.Text = "v";
             this.verstionLabel.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -237,10 +233,10 @@ namespace OFind
             // clearFile
             // 
             this.clearFile.Image = global::OFind.Properties.Resources.Close_16x;
-            this.clearFile.Location = new System.Drawing.Point(495, 31);
-            this.clearFile.Margin = new System.Windows.Forms.Padding(2);
+            this.clearFile.Location = new System.Drawing.Point(660, 38);
+            this.clearFile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.clearFile.Name = "clearFile";
-            this.clearFile.Size = new System.Drawing.Size(22, 22);
+            this.clearFile.Size = new System.Drawing.Size(29, 27);
             this.clearFile.TabIndex = 17;
             this.clearFile.UseVisualStyleBackColor = true;
             this.clearFile.Click += new System.EventHandler(this.ClearFile_Click);
@@ -248,10 +244,10 @@ namespace OFind
             // clearFolder
             // 
             this.clearFolder.Image = global::OFind.Properties.Resources.Close_16x;
-            this.clearFolder.Location = new System.Drawing.Point(495, 9);
-            this.clearFolder.Margin = new System.Windows.Forms.Padding(2);
+            this.clearFolder.Location = new System.Drawing.Point(660, 11);
+            this.clearFolder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.clearFolder.Name = "clearFolder";
-            this.clearFolder.Size = new System.Drawing.Size(22, 22);
+            this.clearFolder.Size = new System.Drawing.Size(29, 27);
             this.clearFolder.TabIndex = 16;
             this.clearFolder.UseVisualStyleBackColor = true;
             this.clearFolder.Click += new System.EventHandler(this.ClearFolder_Click);
@@ -259,10 +255,10 @@ namespace OFind
             // fileButton
             // 
             this.fileButton.Image = global::OFind.Properties.Resources.Document_16x;
-            this.fileButton.Location = new System.Drawing.Point(517, 31);
-            this.fileButton.Margin = new System.Windows.Forms.Padding(2);
+            this.fileButton.Location = new System.Drawing.Point(689, 38);
+            this.fileButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.fileButton.Name = "fileButton";
-            this.fileButton.Size = new System.Drawing.Size(22, 22);
+            this.fileButton.Size = new System.Drawing.Size(29, 27);
             this.fileButton.TabIndex = 5;
             this.fileButton.UseVisualStyleBackColor = true;
             this.fileButton.Click += new System.EventHandler(this.FileButton_Click);
@@ -270,10 +266,10 @@ namespace OFind
             // folderButton
             // 
             this.folderButton.Image = global::OFind.Properties.Resources.Folder_16x;
-            this.folderButton.Location = new System.Drawing.Point(517, 9);
-            this.folderButton.Margin = new System.Windows.Forms.Padding(2);
+            this.folderButton.Location = new System.Drawing.Point(689, 11);
+            this.folderButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.folderButton.Name = "folderButton";
-            this.folderButton.Size = new System.Drawing.Size(22, 22);
+            this.folderButton.Size = new System.Drawing.Size(29, 27);
             this.folderButton.TabIndex = 4;
             this.folderButton.UseVisualStyleBackColor = true;
             this.folderButton.Click += new System.EventHandler(this.FolderButton_Click);
@@ -296,7 +292,7 @@ namespace OFind
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(541, 124);
             this.Controls.Add(this.showFolderCheck);
