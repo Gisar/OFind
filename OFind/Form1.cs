@@ -234,7 +234,12 @@ namespace OFind
             //boxes = GetBoxes();
             bool[] boxes = GetBoxes();
 
-            if (!string.IsNullOrEmpty(path) && !string.IsNullOrEmpty(toFile) && File.Exists(toFile))
+            if (
+                !string.IsNullOrEmpty(path)
+                && Directory.Exists(path)
+                && !string.IsNullOrEmpty(toFile) 
+                && File.Exists(toFile)
+                )
             {
                 List<string> result = CompleteParce(path, boxes);
                 string generatedText = string.Join("", result);
