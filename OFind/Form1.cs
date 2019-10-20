@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace OFind
 {
@@ -16,20 +17,21 @@ namespace OFind
         public MainForm()
         {
             InitializeComponent();
-            string version = "v2.2";
+            string version = "v2.3";
             verstionLabel.Text = version;
             this.Text = this.Text + " - " + version;
         }
 
         public bool[] GetBoxes()
         {
-            bool[] checkBoxes = new bool[6];
+            bool[] checkBoxes = new bool[7];
             checkBoxes[0] = procCheck.Checked;
             checkBoxes[1] = FuncCheck.Checked;
             checkBoxes[2] = viewCheck.Checked;
             checkBoxes[3] = triggerCheck.Checked;
             checkBoxes[4] = tableCheck.Checked;
             checkBoxes[5] = indexCheck.Checked;
+            checkBoxes[6] = showFolderCheck.Checked;
             return checkBoxes;
         }
 
@@ -58,6 +60,7 @@ namespace OFind
             3 - TRIGGER
             4 - TABLE
             5 - INDEX
+            6 - SHOW FOLDER
             */
             int i = 0;
             string pathline = filepath + Environment.NewLine;
@@ -231,12 +234,16 @@ namespace OFind
             //boxes = GetBoxes();
             bool[] boxes = GetBoxes();
 
-            if (!string.IsNullOrEmpty(path) && !string.IsNullOrEmpty(toFile))
+            if (!string.IsNullOrEmpty(path) && !string.IsNullOrEmpty(toFile) && File.Exists(toFile))
             {
                 List<string> result = CompleteParce(path, boxes);
                 string generatedText = string.Join("", result);
                 File.WriteAllText(toFile, generatedText);
                 MessageBox.Show("Поиск завершен. Результаты записаны в файл:" + Environment.NewLine + toFile, "Внимание");
+                if (boxes[6])
+                {
+                    Process.Start(Path.GetDirectoryName(toFile));
+                }
             }
             else if (!string.IsNullOrEmpty(path) && string.IsNullOrEmpty(toFile))
             {
@@ -302,8 +309,7 @@ namespace OFind
 
         private void Form_KeyDown(object sender, KeyEventArgs e)
         {
-            //throw new NotImplementedException();
-            if (e.Control && e.KeyCode == Keys.O) //Ctrl+S
+            if (e.Control && e.KeyCode == Keys.O) //Ctrl+O
             {
                 FolderBrowserDialog folderDlg = new FolderBrowserDialog();
                 DialogResult result = folderDlg.ShowDialog();

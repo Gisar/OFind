@@ -55,6 +55,7 @@ namespace OFind
             this.fileButton = new System.Windows.Forms.Button();
             this.folderButton = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.showFolderCheck = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // FolderLabel
@@ -149,7 +150,7 @@ namespace OFind
             this.triggerCheck.AutoSize = true;
             this.triggerCheck.Checked = true;
             this.triggerCheck.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.triggerCheck.Location = new System.Drawing.Point(48, 124);
+            this.triggerCheck.Location = new System.Drawing.Point(135, 54);
             this.triggerCheck.Margin = new System.Windows.Forms.Padding(2);
             this.triggerCheck.Name = "triggerCheck";
             this.triggerCheck.Size = new System.Drawing.Size(75, 17);
@@ -162,7 +163,7 @@ namespace OFind
             this.tableCheck.AutoSize = true;
             this.tableCheck.Checked = true;
             this.tableCheck.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.tableCheck.Location = new System.Drawing.Point(48, 147);
+            this.tableCheck.Location = new System.Drawing.Point(135, 77);
             this.tableCheck.Margin = new System.Windows.Forms.Padding(2);
             this.tableCheck.Name = "tableCheck";
             this.tableCheck.Size = new System.Drawing.Size(71, 17);
@@ -175,7 +176,7 @@ namespace OFind
             this.indexCheck.AutoSize = true;
             this.indexCheck.Checked = true;
             this.indexCheck.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.indexCheck.Location = new System.Drawing.Point(48, 170);
+            this.indexCheck.Location = new System.Drawing.Point(135, 100);
             this.indexCheck.Margin = new System.Windows.Forms.Padding(2);
             this.indexCheck.Name = "indexCheck";
             this.indexCheck.Size = new System.Drawing.Size(72, 17);
@@ -185,7 +186,7 @@ namespace OFind
             // 
             // clearCheckBtn
             // 
-            this.clearCheckBtn.Location = new System.Drawing.Point(134, 55);
+            this.clearCheckBtn.Location = new System.Drawing.Point(211, 53);
             this.clearCheckBtn.Margin = new System.Windows.Forms.Padding(2);
             this.clearCheckBtn.Name = "clearCheckBtn";
             this.clearCheckBtn.Size = new System.Drawing.Size(82, 22);
@@ -196,7 +197,7 @@ namespace OFind
             // 
             // setCheckBtn
             // 
-            this.setCheckBtn.Location = new System.Drawing.Point(134, 81);
+            this.setCheckBtn.Location = new System.Drawing.Point(211, 79);
             this.setCheckBtn.Margin = new System.Windows.Forms.Padding(2);
             this.setCheckBtn.Name = "setCheckBtn";
             this.setCheckBtn.Size = new System.Drawing.Size(82, 22);
@@ -281,11 +282,24 @@ namespace OFind
             // 
             this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.ToolTip1_Popup);
             // 
+            // showFolderCheck
+            // 
+            this.showFolderCheck.AutoSize = true;
+            this.showFolderCheck.Checked = true;
+            this.showFolderCheck.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.showFolderCheck.Location = new System.Drawing.Point(344, 57);
+            this.showFolderCheck.Name = "showFolderCheck";
+            this.showFolderCheck.Size = new System.Drawing.Size(108, 17);
+            this.showFolderCheck.TabIndex = 20;
+            this.showFolderCheck.Text = "Открыть папку?";
+            this.showFolderCheck.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(541, 193);
+            this.ClientSize = new System.Drawing.Size(541, 124);
+            this.Controls.Add(this.showFolderCheck);
             this.Controls.Add(this.verstionLabel);
             this.Controls.Add(this.SearchButton);
             this.Controls.Add(this.clearFile);
@@ -305,9 +319,11 @@ namespace OFind
             this.Controls.Add(this.toFileTextBox);
             this.Controls.Add(this.fromFolderTextBox);
             this.Controls.Add(this.FolderLabel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Text = "OFind";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form_KeyDown);
@@ -339,6 +355,7 @@ namespace OFind
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label verstionLabel;
         private ToolTip toolTip1;
+        private CheckBox showFolderCheck;
     }
 }
 
